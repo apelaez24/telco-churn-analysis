@@ -1,23 +1,3 @@
-✅ Today’s Deliverables
-✅ 1️⃣ 1_data_cleaning.ipynb → Cleaned CSV saved
-✅ 2️⃣ 2_eda_visuals.ipynb → Insights & plots
-✅ 3️⃣ create_tables.sql → Ready to run later. We actually made the load_to_postgres .py file so it can make this for us once we get home and load postgres on the local computer.
-✅ 4️⃣ requirements.txt → Done
-✅ 5️⃣ README.md → Already drafted below
-
-✅ Next When Back Home
-Confirm psql works.
-
-Create DB telco_churn_db.
-
-Run create_tables.sql.
-
-Use Python + SQLAlchemy + psycopg2 to to_sql or bulk insert.
-
-Switch pandas.read_csv() to pandas.read_sql() for real DB-powered analysis.
-
-
-# Update this later
 
 # 📊 Telco Customer Churn Analysis
 
