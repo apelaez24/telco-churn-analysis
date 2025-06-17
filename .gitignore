@@ -1,0 +1,11 @@
+# Ignore env secrets
+.env
+
+# Ignore Python cache
+__pycache__/
+
+# Ignore Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# (Optional) VS Code settings
+.vscode/

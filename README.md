@@ -1,0 +1,139 @@
+✅ Today’s Deliverables
+✅ 1️⃣ 1_data_cleaning.ipynb → Cleaned CSV saved
+✅ 2️⃣ 2_eda_visuals.ipynb → Insights & plots
+✅ 3️⃣ create_tables.sql → Ready to run later. We actually made the load_to_postgres .py file so it can make this for us once we get home and load postgres on the local computer.
+✅ 4️⃣ requirements.txt → Done
+✅ 5️⃣ README.md → Already drafted below
+
+✅ Next When Back Home
+Confirm psql works.
+
+Create DB telco_churn_db.
+
+Run create_tables.sql.
+
+Use Python + SQLAlchemy + psycopg2 to to_sql or bulk insert.
+
+Switch pandas.read_csv() to pandas.read_sql() for real DB-powered analysis.
+
+
+# Update this later
+
+# 📊 Telco Customer Churn Analysis
+
+**Author:** Angel Pelaez  
+**Project Type:** Data Cleaning · Exploratory Data Analysis · SQL Database Integration
+
+---
+
+## 📌 Project Overview
+
+This project analyzes customer churn behavior for a fictional telecom company.  
+The goal is to identify factors that contribute to churn and to build a pipeline that:
+- Cleans raw customer data
+- Generates key visual insights
+- Stores the clean dataset in a PostgreSQL database for future analysis
+
+---
+
+## 📁 Project Structure
+
+├── data/
+│ └── telco_churn_cleaned.csv # Final cleaned dataset
+├── notebooks/
+│ ├── 1_data_cleaning.ipynb # Data cleaning & export CSV
+│ ├── 2_eda_visuals.ipynb # EDA plots & insights
+├── sql/
+│ └── create_tables.sql # SQL schema (optional, not needed if using Python loader)
+├── scripts/
+│ └── load_to_postgres.py # Python script to load data to PostgreSQL
+├── .env # Database credentials (not tracked in Git)
+├── .gitignore # Ignores .env & other junk files
+├── requirements.txt # Project dependencies
+├── README.md # This file
+
+
+---
+
+## 🚀 How to Run This Project
+
+1️⃣ **Clone the repository**
+
+git clone https://github.com/yourusername/telco-churn-analysis.git
+cd telco-churn-analysis
+
+
+2️⃣ **Create & activate a virtual environment**
+
+
+conda create -n flask_env python=3.11
+conda activate flask_env
+
+
+3️⃣ **Install all required packages**
+pip install -r requirements.txt
+
+
+4️⃣ **Run the Jupyter notebooks in order**
+notebooks/1_data_cleaning.ipynb
+👉 Loads raw data, cleans it, saves telco_churn_cleaned.csv to data/.
+
+notebooks/2_eda_visuals.ipynb
+👉 Loads the cleaned CSV, generates visualizations, and summarizes insights.
+
+
+5️⃣ **Load the cleaned data to PostgreSQL**
+When your local PostgreSQL server is ready:
+
+Create a .env file in the root directory with your database credentials:
+
+POSTGRES_USER=your_postgres_username
+POSTGRES_PASSWORD=your_postgres_password
+POSTGRES_HOST=localhost
+POSTGRES_PORT=5432
+POSTGRES_DB=your_database_name
+
+Then run:
+python scripts/load_to_postgres.py
+
+This will automatically create (or replace) the telco_churn table and load the cleaned data.
+
+---
+## 🔑 Key Insights
+
+✅ Month-to-month contract customers have the highest churn rate
+
+✅ Customers with shorter tenure are more likely to churn
+
+✅ Higher monthly charges slightly increase churn risk
+
+✅ Senior citizens churn slightly more than non-seniors
+
+---
+
+## 🗂️ Dependencies
+
+All dependencies are listed in requirements.txt:
+
+pandas
+
+seaborn
+
+matplotlib
+
+SQLAlchemy
+
+python-dotenv
+
+and others used in notebooks
+
+---
+
+## 🔒 Notes on Security
+
+⚠️ .env is used to keep database credentials private.
+
+This file is ignored by .gitignore and should never be pushed to GitHub.
+
+---
+
