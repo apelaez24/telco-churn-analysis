@@ -18,20 +18,21 @@ The goal is to identify factors that contribute to churn and to build a pipeline
 
 ## 📁 Project Structure
 
-├── data/
-│ └── telco_churn_cleaned.csv # Final cleaned dataset
-├── notebooks/
-│ ├── 1_data_cleaning.ipynb # Data cleaning & export CSV
-│ ├── 2_eda_visuals.ipynb # EDA plots & insights
-├── sql/
-│ └── create_tables.sql # SQL schema (optional, not needed if using Python loader)
-├── scripts/
-│ └── load_to_postgres.py # Python script to load data to PostgreSQL
-├── .env # Database credentials (not tracked in Git)
-├── .gitignore # Ignores .env & other junk files
-├── requirements.txt # Project dependencies
-├── README.md # This file
-
+📦 telco-churn-analysis
+┣ 📂 data
+┃ ┗ 📄 telco_churn_cleaned.csv # Final cleaned dataset
+┣ 📂 notebooks
+┃ ┣ 📄 1_data_cleaning.ipynb # Data cleaning & export
+┃ ┣ 📄 2_eda_visuals.ipynb # EDA plots & insights
+┣ 📂 sql
+┃ ┗ 📄 create_tables.sql # SQL schema (one-time setup)
+┣ 📂 scripts
+┃ ┗ 📄 load_to_postgres.py # Python script to insert data to PostgreSQL
+┣ 📄 .env.example # Template for env vars (DO NOT COMMIT .env)
+┣ 📄 .gitignore # Ignores .env & junk files
+┣ 📄 requirements.txt # Project dependencies
+┣ 📄 DB_SETUP.md # DB setup instructions
+┗ 📄 README.md # This file
 
 ---
 
