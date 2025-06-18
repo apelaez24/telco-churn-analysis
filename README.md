@@ -45,16 +45,17 @@ cd telco-churn-analysis
 
 2️⃣ **Create & activate a virtual environment**
 
-
 conda create -n flask_env python=3.11
 conda activate flask_env
 
 
 3️⃣ **Install all required packages**
+
 pip install -r requirements.txt
 
 
 4️⃣ **Run the Jupyter notebooks in order**
+
 notebooks/1_data_cleaning.ipynb
 👉 Loads raw data, cleans it, saves telco_churn_cleaned.csv to data/.
 
@@ -63,6 +64,7 @@ notebooks/2_eda_visuals.ipynb
 
 
 5️⃣ **Load the cleaned data to PostgreSQL**
+
 When your local PostgreSQL server is ready:
 
 Create a .env file in the root directory with your database credentials:
@@ -77,6 +79,13 @@ Then run:
 python scripts/load_to_postgres.py
 
 This will automatically create (or replace) the telco_churn table and load the cleaned data.
+
+## ✅ Recommended way
+
+1️⃣ Run `sql/create_tables.sql` once to define the table with the proper schema and constraints.
+
+2️⃣ Then run `python scripts/load_to_postgres.py`  
+   👉 This will append new rows without dropping the table.
 
 ---
 ## 🔑 Key Insights
