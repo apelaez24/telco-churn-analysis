@@ -69,6 +69,7 @@ notebooks/2_eda_visuals.ipynb
 
 When your local PostgreSQL server is ready:
 
+
 Create a .env file in the root directory with your database credentials:
 
 POSTGRES_USER=your_postgres_username
@@ -81,7 +82,9 @@ POSTGRES_PORT=5432
 
 POSTGRES_DB=your_database_name
 
+
 Then run:
+
 python scripts/load_to_postgres.py
 
 This will automatically create (or replace) the telco_churn table and load the cleaned data.
