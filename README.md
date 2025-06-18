@@ -72,9 +72,13 @@ When your local PostgreSQL server is ready:
 Create a .env file in the root directory with your database credentials:
 
 POSTGRES_USER=your_postgres_username
+
 POSTGRES_PASSWORD=your_postgres_password
+
 POSTGRES_HOST=localhost
+
 POSTGRES_PORT=5432
+
 POSTGRES_DB=your_database_name
 
 Then run:
